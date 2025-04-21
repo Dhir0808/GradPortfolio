@@ -1,0 +1,76 @@
+Debriefing Report
+
+0. Name: Dhir Katre
+
+1. I spent a total of 6 hours on this assignmennt.
+
+2. I would rate this assignment as moderate.
+
+3. I worked on this assignment mostly alone referencing the notes whenever required.
+
+4. I feel like I understand 85% of the material it covers.
+
+5. No
+
+1. Priority Queue Time Complexities:
+
+(a) Unsorted array:
+    - push: O(1) - just append
+    - pop-min: O(n) - scan entire array
+    - peek: O(n) - scan entire array
+    - build: O(1) - just store array as is
+
+(b) Sorted array (highest first):
+    - push: O(n) - need to shift elements
+    - pop-min: O(1) - remove from end
+    - peek: O(1) - look at end
+    - build: O(n log n) - need to sort
+
+(c) Reversely sorted array:
+    - push: O(n) - need to shift elements
+    - pop-min: O(1) - remove from front
+    - peek: O(1) - look at front
+    - build: O(n log n) - need to sort
+
+(d) Sorted linked list:
+    - push: O(n) - traverse to right position
+    - pop-min: O(1) - remove from end
+    - peek: O(1) - look at end
+    - build: O(n log n) - need to sort
+
+(e) Binary heap:
+    - push: O(log n) - bubble up
+    - pop-min: O(log n) - remove root and bubble down
+    - peek: O(1) - look at root
+    - build: O(n) - heapify
+
+2. Heap Building Time Complexity Analysis:
+
+Method 1 (n insertions):
+- Each insertion is O(log i) where i is current heap size
+- Total: sum(log i) for i from 1 to n
+- This sum equals O(n log n)
+
+Method 2 (heapify):
+- Start from n/2 down to 1
+- Each node requires at most log(height from bottom) operations
+- Most nodes are leaves (height 0)
+- Number of nodes at each height decreases exponentially
+- Total: O(n)
+
+3. k-way Mergesort Analysis:
+Time Complexity: O(n log_k n)
+- Height of recursion tree: log_k n (base k)
+- At each level, we merge k sorted lists of total size n
+- Using min-heap for k-way merge: O(n log k)
+- Total: O(n log k * log_k n)
+- When k=2, reduces to standard O(n log n)
+- As k increases, log_k n decreases but n log k increases
+
+4. Data Stream Analysis:
+Time Complexity: O(n log k)
+- For each element in stream (n iterations):
+  * If heap size < k: insert O(log k)
+  * If heap size = k: compare with max and possibly replace O(log k)
+Space Complexity: O(k)
+- Only store k elements in heap at any time

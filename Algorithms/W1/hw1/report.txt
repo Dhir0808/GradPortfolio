@@ -1,0 +1,17 @@
+Debriefing Report
+
+0. Name: Dhir Katre
+
+1. I spent a total of 4 hours on this assignmennt.
+
+2. I would rate this assignment as easy.
+
+3. I worked on this assignment mostly alone but I discussed a bit about buggy quick sort with one of my classmate named Dart on how the _search has to work to have the correct output.
+
+4. I feel like the study materials providded are really good and it covers everything.
+
+5. The course notes are really nice, I was able to do all of this assignment just by refrencing the course notes. 
+
+6. I got all the topics that were covered in the class so i didn't had to go through the videos but I feel they are a really good resource that might come handy in future.
+
+7. No
